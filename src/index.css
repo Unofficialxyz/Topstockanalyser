@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #020617;
+  -webkit-font-smoothing: antialiased;
+}
+
+.custom-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+.custom-scroll-x::-webkit-scrollbar {
+  height: 4px;
+}
+.custom-scroll-x::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scroll-x::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+main > * {
+  animation: fadeIn 0.4s ease-out;
+}
+
+/* Range slider styling */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  background: linear-gradient(to right, #10b981 0%, #10b981 var(--value, 50%), #1e293b var(--value, 50%), #1e293b 100%);
+  height: 8px;
+  border-radius: 8px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom right, #10b981, #059669);
+  border: 2px solid #fff;
+  margin-top: -6px;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.4);
+  transition: transform 0.15s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+}
+
+input[type="range"]::-moz-range-track {
+  background: #1e293b;
+  height: 8px;
+  border-radius: 8px;
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom right, #10b981, #059669);
+  border: 2px solid #fff;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.4);
+}
+
+input[type="range"]::-moz-range-progress {
+  background: #10b981;
+  height: 8px;
+  border-radius: 8px 0 0 8px;
+}

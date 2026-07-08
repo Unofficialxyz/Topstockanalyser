@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    { "source": "/api/stock", "destination": "/api/stock" },
+    { "source": "/api/fundamentals", "destination": "/api/fundamentals" },
+    { "source": "/api/search", "destination": "/api/search" },
+    { "source": "/((?!api).*)", "destination": "/index.html" }
+  ]
+}
